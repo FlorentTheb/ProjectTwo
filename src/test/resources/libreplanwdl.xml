@@ -1,0 +1,257 @@
+<application xmlns="http://research.sun.com/wadl/2006/10"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<grammars>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:tns="http://rest.ws.libreplan.org" attributeFormDefault="unqualified"
+			elementFormDefault="qualified" targetNamespace="http://rest.ws.libreplan.org">
+			<xs:element name="criterion-requirement" type="tns:criterionRequirementDTO" />
+			<xs:element name="direct-criterion-requirement" type="tns:directCriterionRequirementDTO" />
+			<xs:element name="indirect-criterion-requirement" type="tns:indirectCriterionRequirementDTO" />
+			<xs:element name="instance-constraint-violations-list"
+				type="tns:instanceConstraintViolationsListDTO" />
+			<xs:element name="internal-error" type="tns:internalErrorDTO" />
+			<xs:element name="label" type="tns:labelReferenceDTO" />
+			<xs:element name="order" type="tns:orderDTO" />
+			<xs:element name="order-line" type="tns:orderLineDTO" />
+			<xs:element name="order-line-group" type="tns:orderLineGroupDTO" />
+			<xs:element name="order-list" type="tns:orderListDTO" />
+			<xs:complexType name="instanceConstraintViolationsListDTO">
+				<xs:sequence>
+					<xs:element maxOccurs="unbounded" minOccurs="0"
+						name="instance-constraint-violations" type="tns:instanceConstraintViolationsDTO" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="instanceConstraintViolationsDTO">
+				<xs:sequence>
+					<xs:element maxOccurs="unbounded" minOccurs="0"
+						name="constraint-violation" type="tns:constraintViolationDTO" />
+					<xs:element minOccurs="0" name="recoverable-error" type="tns:recoverableErrorDTO" />
+					<xs:element minOccurs="0" ref="tns:internal-error" />
+				</xs:sequence>
+				<xs:attribute name="instance-id" type="xs:string" />
+				<xs:attribute name="num-item" type="xs:long" />
+				<xs:attribute name="code" type="xs:string" />
+				<xs:attribute name="entity-type" type="xs:string" />
+			</xs:complexType>
+			<xs:complexType name="constraintViolationDTO">
+				<xs:sequence />
+				<xs:attribute name="field-name" type="xs:string" />
+				<xs:attribute name="message" type="xs:string" />
+			</xs:complexType>
+			<xs:complexType name="recoverableErrorDTO">
+				<xs:sequence>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="property"
+						type="tns:propertyDTO" />
+				</xs:sequence>
+				<xs:attribute name="error-code" type="xs:int" use="required" />
+				<xs:attribute name="message" type="xs:string" />
+			</xs:complexType>
+			<xs:complexType name="propertyDTO">
+				<xs:sequence />
+				<xs:attribute name="name" type="xs:string" />
+				<xs:attribute name="value" type="xs:string" />
+			</xs:complexType>
+			<xs:complexType name="internalErrorDTO">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="stack-trace" type="xs:string" />
+				</xs:sequence>
+				<xs:attribute name="message" type="xs:string" />
+			</xs:complexType>
+			<xs:complexType name="orderListDTO">
+				<xs:sequence>
+					<xs:element maxOccurs="unbounded" minOccurs="0" ref="tns:order" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="orderDTO">
+				<xs:complexContent>
+					<xs:extension base="tns:orderLineGroupDTO">
+						<xs:sequence />
+						<xs:attribute name="dependencies-constraints-have-priority"
+							type="xs:boolean" />
+						<xs:attribute name="calendar-name" type="xs:string" />
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="orderLineGroupDTO">
+				<xs:complexContent>
+					<xs:extension base="tns:orderElementDTO">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="children">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:choice maxOccurs="unbounded" minOccurs="0">
+											<xs:element ref="tns:order-line" />
+											<xs:element ref="tns:order-line-group" />
+											<xs:element ref="tns:order" />
+										</xs:choice>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="orderElementDTO">
+				<xs:complexContent>
+					<xs:extension base="tns:integrationEntityDTO">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="labels">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element maxOccurs="unbounded" minOccurs="0"
+											ref="tns:label" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element minOccurs="0" name="material-assignments">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element maxOccurs="unbounded" minOccurs="0"
+											name="material-assignment" type="tns:materialAssignmentDTO" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element minOccurs="0" name="advance-measurements">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element maxOccurs="unbounded" minOccurs="0"
+											name="advance-measurement" type="tns:advanceMeasurementDTO" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element minOccurs="0" name="criterion-requirements">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:choice maxOccurs="unbounded" minOccurs="0">
+											<xs:element ref="tns:direct-criterion-requirement" />
+											<xs:element ref="tns:indirect-criterion-requirement" />
+										</xs:choice>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="name" type="xs:string" />
+						<xs:attribute name="init-date" type="xs:anySimpleType" />
+						<xs:attribute name="deadline" type="xs:anySimpleType" />
+						<xs:attribute name="description" type="xs:string" />
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType abstract="true" name="integrationEntityDTO">
+				<xs:sequence />
+				<xs:attribute name="code" type="xs:string" />
+			</xs:complexType>
+			<xs:complexType name="orderLineDTO">
+				<xs:complexContent>
+					<xs:extension base="tns:orderElementDTO">
+						<xs:sequence>
+							<xs:element minOccurs="0" name="hours-groups">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element maxOccurs="unbounded" minOccurs="0"
+											name="hours-group" type="tns:hoursGroupDTO" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="hoursGroupDTO">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="criterion-requirements">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:choice maxOccurs="unbounded" minOccurs="0">
+									<xs:element ref="tns:direct-criterion-requirement" />
+									<xs:element ref="tns:indirect-criterion-requirement" />
+								</xs:choice>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="code" type="xs:string" />
+				<xs:attribute name="resource-type" type="tns:resourceEnumDTO" />
+				<xs:attribute name="working-hours" type="xs:int" />
+			</xs:complexType>
+			<xs:complexType name="directCriterionRequirementDTO">
+				<xs:complexContent>
+					<xs:extension base="tns:criterionRequirementDTO">
+						<xs:sequence />
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="criterionRequirementDTO">
+				<xs:sequence />
+				<xs:attribute name="name" type="xs:string" />
+				<xs:attribute name="type" type="xs:string" />
+			</xs:complexType>
+			<xs:complexType name="indirectCriterionRequirementDTO">
+				<xs:complexContent>
+					<xs:extension base="tns:criterionRequirementDTO">
+						<xs:sequence />
+						<xs:attribute name="valid" type="xs:boolean" use="required" />
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="labelReferenceDTO">
+				<xs:sequence />
+				<xs:attribute name="code" type="xs:string" />
+			</xs:complexType>
+			<xs:complexType name="materialAssignmentDTO">
+				<xs:sequence />
+				<xs:attribute name="material-code" type="xs:string" />
+				<xs:attribute name="units" type="xs:decimal" />
+				<xs:attribute name="unit-price" type="xs:decimal" />
+				<xs:attribute name="estimated-availability" type="xs:anySimpleType" />
+			</xs:complexType>
+			<xs:complexType name="advanceMeasurementDTO">
+				<xs:sequence />
+				<xs:attribute name="date" type="xs:anySimpleType" />
+				<xs:attribute name="value" type="xs:decimal" />
+			</xs:complexType>
+			<xs:simpleType name="resourceEnumDTO">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="RESOURCE" />
+					<xs:enumeration value="WORKER" />
+					<xs:enumeration value="MACHINE" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:schema>
+	</grammars>
+	<resources base="http://localhost:8090/libreplan/ws/rest/">
+		<resource path="/orderelements/">
+			<method name="POST">
+				<request>
+					<representation mediaType="application/xml" />
+				</request>
+				<response>
+					<representation mediaType="application/xml" />
+				</response>
+			</method>
+			<method name="GET">
+				<response>
+					<representation mediaType="application/xml" />
+				</response>
+			</method>
+			<resource path="/{code}/">
+				<param name="code" style="template" type="xs:string" />
+				<method name="GET">
+					<request />
+					<response>
+						<representation mediaType="application/xml" />
+					</response>
+				</method>
+			</resource>
+			<resource path="/{code}/">
+				<param name="code" style="template" type="xs:string" />
+				<method name="DELETE">
+					<request />
+					<response>
+						<representation mediaType="application/xml" />
+					</response>
+				</method>
+			</resource>
+		</resource>
+	</resources>
+</application>
