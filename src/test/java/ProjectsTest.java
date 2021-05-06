@@ -21,12 +21,12 @@ import com.eviware.soapui.model.testsuite.TestRunner;
 import com.eviware.soapui.support.SoapUIException;
 
 @RunWith(Parameterized.class)
-public class RequestTest {
+public class ProjectsTest {
 
     private String testCaseName;
     private static String soapuiProjectName = "src/test/resources/LibrePlanProject2.xml";
 
-    public RequestTest(String testCaseName) {
+    public ProjectsTest(String testCaseName) {
         this.testCaseName = testCaseName;
     }   
 
@@ -34,7 +34,7 @@ public class RequestTest {
     public static Collection<String[] > getTestCases() throws XmlException, IOException, SoapUIException {
         final ArrayList<String[]>  testCases = new ArrayList<String[]>();
         WsdlProject soapuiProject = new WsdlProject(soapuiProjectName);
-        WsdlTestSuite wsdlTestSuite = soapuiProject.getTestSuiteByName("TestSuite 2");
+        WsdlTestSuite wsdlTestSuite = soapuiProject.getTestSuiteByName("Projects - TestSuite");
         List<TestCase> testCaseStrings = wsdlTestSuite.getTestCaseList();
 
         for (TestCase ts : testCaseStrings) {
@@ -55,7 +55,7 @@ public class RequestTest {
     public static boolean runSoapUITestCase(String testCase) throws XmlException, IOException, SoapUIException {
         TestRunner.Status exitValue = TestRunner.Status.INITIALIZED;
         WsdlProject soapuiProject = new WsdlProject(soapuiProjectName);
-        WsdlTestSuite testSuite = soapuiProject.getTestSuiteByName("TestSuite 2");
+        WsdlTestSuite testSuite = soapuiProject.getTestSuiteByName("Projects - TestSuite");
         if (testSuite == null) {
             System.err.println("runner soapUI, la suite de test est null : " + testSuite);
             return false;
