@@ -1,17 +1,359 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="ff8e4ab6-66d0-4f1f-b4ee-737fa7591ded" created="3.8.0" activeEnvironment="Default environment" name="LibrePlanProject2" resourceRoot="" updated="3.8.0 2021-04-27T13:32:15Z" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="88543613-0a8b-4012-afcf-6b37499c59b8" wadlVersion="http://wadl.dev.java.net/2009/02" name="LibrePlanAPI" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://localhost:8080/libreplan</con:endpoint></con:endpoints><con:resource name="orderelements" path="/ws/rest/orderelements" id="101fc058-1fd9-4bfe-b0ba-b1bf3b2dadf6"><con:settings/><con:parameters/><con:resource name="{code_order}" path="{code_order}" id="5de358a0-d501-43b8-a92f-09b8019e7ccc"><con:settings/><con:parameters><con:parameter required="true"><con:name>code_order</con:name><con:value>code_order</con:value><con:style>TEMPLATE</con:style><con:default>code_order</con:default></con:parameter></con:parameters><con:method name="GET /ws/rest/orderelements/{code_order}" id="934a213e-f9b5-4b7d-89d0-b1c7ada5c9a1" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:rest="http://rest.ws.libreplan.org">rest:order</con:element></con:representation><con:request name="Request 1" id="c7e0fbb9-e446-4580-b91f-059e9ab146d4" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8080/libreplan</con:endpoint><con:request/><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters><con:entry key="code_order" value=""/></con:parameters></con:request></con:method><con:method name="DELETE /ws/rest/orderelements/{code_order}" id="576cf6c2-c842-4062-9d41-2d22ab9954f3" method="DELETE"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>text/xml</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:request name="Request 1" id="b96f4c90-e875-44fe-b799-d0113bc0d87d" mediaType="application/json" postQueryString="false"><con:settings/><con:endpoint>http://localhost:8080/libreplan</con:endpoint><con:request/><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters><con:entry key="code_order" value=""/></con:parameters></con:request></con:method></con:resource><con:method name="POST /ws/rest/orderelements" id="14f1f54f-423a-41bd-ac45-94af68f4a39e" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/><con:element xmlns:rest="http://rest.ws.libreplan.org">rest:order-list</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>text/html;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:rest="http://rest.ws.libreplan.org">rest:instance-constraint-violations-list</con:element></con:representation><con:request name="Request 1" id="ee014223-b3a4-4c1c-9ee3-7ccb38a91449" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080/libreplan</con:endpoint><con:request/><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:request></con:method><con:method name="GET /ws/rest/orderelements" id="593fbfac-4ee2-4353-a5c7-d07a99fcb12f" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>text/html;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:rest="http://rest.ws.libreplan.org">rest:order-list</con:element></con:representation><con:request name="Request 1" id="9b87119d-d8b6-4d83-9811-f79f2b9f7d98" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080/libreplan</con:endpoint><con:request/><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:request></con:method></con:resource><con:resource name="resources" path="/ws/rest/resources" id="e5291541-6ec0-4884-99bd-121ff4e08caf"><con:settings/><con:parameters/><con:resource name="{resource_order}" path="{resource_order}" id="eacfdd97-195e-4f1b-b487-9de698ada1cc"><con:settings/><con:parameters><con:parameter required="true"><con:name>resource_order</con:name><con:value>resource_order</con:value><con:style>TEMPLATE</con:style><con:default>resource_order</con:default></con:parameter></con:parameters><con:method name="GET /ws/rest/resources/{resource_order}" id="0292f837-694b-4f5b-b53c-dc1c73145d14" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>text/html;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:rest="http://rest.ws.libreplan.org">rest:worker</con:element></con:representation><con:request name="Request 1" id="f2299127-a144-4435-8754-6c83bbdb500b" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8080/libreplan</con:endpoint><con:request/><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:request></con:method></con:resource><con:method name="POST /ws/rest/resources" id="afb887d3-531f-46fa-867a-ba9eeb8ab690" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:rest="http://rest.ws.libreplan.org">rest:instance-constraint-violations-list</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/><con:element xmlns:rest="http://rest.ws.libreplan.org">rest:resource-list</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/xml</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:rest="http://rest.ws.libreplan.org">rest:internal-error</con:element></con:representation><con:request name="Request 1" id="80676fee-2a54-44b8-9dba-8914bf384fa0" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080/libreplan</con:endpoint><con:request/><con:credentials><con:selectedAuthProfile>Writer</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:request></con:method><con:method name="GET /ws/rest/calendars/{calendar_code}" id="4daf2cdc-5394-499f-af5f-414c0656ed5f" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:rest="http://rest.ws.libreplan.org">rest:resource-list</con:element></con:representation><con:request name="Request 1" id="647bf37d-33bf-432b-a8a1-658e606e9701" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8080/libreplan</con:endpoint><con:request/><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:request></con:method></con:resource><con:resource name="calendars" path="/ws/rest/calendars" id="da493148-ce46-4335-b27f-09da49f843e9"><con:settings/><con:parameters/><con:resource name="{calendar_code}" path="{calendar_code}" id="63e117dc-d462-4b4c-a049-892760fdb0ef"><con:settings/><con:parameters><con:parameter required="true"><con:name>calendar_code</con:name><con:value>calendar_code</con:value><con:style>TEMPLATE</con:style><con:default>calendar_code</con:default></con:parameter></con:parameters><con:method name="GET /ws/rest/calendars/{calendar_code}" id="d3fbc3f2-2c44-4b7b-918a-7789da827997" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:rest="http://rest.ws.libreplan.org">rest:base-calendar-list</con:element></con:representation><con:request name="Request 1" id="09105ef7-894d-4931-9766-b6046d5cca9a" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8080/libreplan</con:endpoint><con:request/><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters><con:entry key="calendar_code" value="CALENDAR0312"/></con:parameters></con:request></con:method></con:resource><con:method name="GET /ws/rest/calendars" id="bedece24-9612-4dc8-9f29-a8a263d411fa" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:rest="http://rest.ws.libreplan.org">rest:base-calendar-list</con:element></con:representation><con:request name="Request 1" id="16552b89-00f4-4ad1-bfbb-f9eb0e44d89d" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8080/libreplan</con:endpoint><con:request/><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="bbe24f62-e16d-4803-9d07-699f820ced70" name="Projects - TestSuite"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:runType>SEQUENTIAL</con:runType><con:testCase id="b74703d7-f302-448d-9352-1043a6be1921" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Create Project - TestCase" searchProperties="true" timeout="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="properties" name="Properties" id="8cff8913-67c5-4d7f-94a1-5d45db4235de"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>order_code</con:name><con:value>ORDER0056</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script" id="7004ed37-71e4-4083-b960-fadf5d27f933"><con:settings/><con:config><script>def str_prev_order_code = testRunner.testCase.testSteps["Properties"].getPropertyValue("order_code");
-def str_1bis = str_prev_order_code.substring(str_prev_order_code.indexOf('0'), str_prev_order_code.length());
-System.out.println("New string = " + str_1bis);
-int newCode = Integer.parseInt(str_1bis) + 1;
-System.out.println("New int = " + newCode);
-def newCodebis = Integer.toString(newCode);
-def str_newCode = "ORDER";
-for(int i=0; i&lt;(4-newCodebis.length()); i++) {
-	 str_newCode += "0";
-}
-str_newCode += newCodebis;
-System.out.println("Final => " + str_newCode);
-testRunner.testCase.testSteps["Properties"].setPropertyValue("order_code", str_newCode);</script></con:config></con:testStep><con:testStep type="restrequest" name="REST Request" id="06675f1a-7a16-438a-aa84-a9585fa9b6df"><con:settings/><con:config service="LibrePlanAPI" resourcePath="/ws/rest/orderelements" methodName="POST /ws/rest/orderelements" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="ee014223-b3a4-4c1c-9ee3-7ccb38a91449" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080/libreplan</con:endpoint><con:request><![CDATA[<order-list xmlns="http://rest.ws.libreplan.org">
+<con:soapui-project id="ff8e4ab6-66d0-4f1f-b4ee-737fa7591ded" created="3.8.0" activeEnvironment="Default environment" name="LibrePlanProject2" resourceRoot="" updated="3.8.0 2021-04-27T13:32:15Z" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config">
+	<con:settings/>
+	<con:interface xsi:type="con:RestService" id="88543613-0a8b-4012-afcf-6b37499c59b8" wadlVersion="http://wadl.dev.java.net/2009/02" name="LibrePlanAPI" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<con:settings/>
+		<con:definitionCache type="TEXT" rootPart=""/>
+		<con:endpoints>
+			<con:endpoint>http://localhost:8080/libreplan</con:endpoint>
+		</con:endpoints>
+		<con:resource name="orderelements" path="/ws/rest/orderelements" id="101fc058-1fd9-4bfe-b0ba-b1bf3b2dadf6">
+			<con:settings/>
+			<con:parameters/>
+			<con:resource name="{code_order}" path="{code_order}" id="5de358a0-d501-43b8-a92f-09b8019e7ccc">
+				<con:settings/>
+				<con:parameters>
+					<con:parameter required="true">
+						<con:name>code_order</con:name>
+						<con:value>code_order</con:value>
+						<con:style>TEMPLATE</con:style>
+						<con:default>code_order</con:default>
+					</con:parameter>
+				</con:parameters>
+				<con:method name="GET /ws/rest/orderelements/{code_order}" id="934a213e-f9b5-4b7d-89d0-b1c7ada5c9a1" method="GET">
+					<con:settings/>
+					<con:parameters/>
+					<con:representation type="RESPONSE">
+						<con:mediaType>application/xml</con:mediaType>
+						<con:status>200</con:status>
+						<con:params/>
+						<con:element xmlns:rest="http://rest.ws.libreplan.org">rest:order</con:element>
+					</con:representation>
+					<con:request name="Request 1" id="c7e0fbb9-e446-4580-b91f-059e9ab146d4" mediaType="application/json">
+						<con:settings/>
+						<con:endpoint>http://localhost:8080/libreplan</con:endpoint>
+						<con:request/>
+						<con:credentials>
+							<con:selectedAuthProfile>No Authorization
+							</con:selectedAuthProfile>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:parameters>
+							<con:entry key="code_order" value=""/>
+						</con:parameters>
+					</con:request>
+				</con:method>
+				<con:method name="DELETE /ws/rest/orderelements/{code_order}" id="576cf6c2-c842-4062-9d41-2d22ab9954f3" method="DELETE">
+					<con:settings/>
+					<con:parameters/>
+					<con:representation type="REQUEST">
+						<con:mediaType>application/json</con:mediaType>
+						<con:params/>
+					</con:representation>
+					<con:representation type="RESPONSE">
+						<con:mediaType>text/xml</con:mediaType>
+						<con:status>200</con:status>
+						<con:params/>
+					</con:representation>
+					<con:request name="Request 1" id="b96f4c90-e875-44fe-b799-d0113bc0d87d" mediaType="application/json" postQueryString="false">
+						<con:settings/>
+						<con:endpoint>http://localhost:8080/libreplan</con:endpoint>
+						<con:request/>
+						<con:credentials>
+							<con:selectedAuthProfile>No Authorization
+							</con:selectedAuthProfile>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:parameters>
+							<con:entry key="code_order" value=""/>
+						</con:parameters>
+					</con:request>
+				</con:method>
+			</con:resource>
+			<con:method name="POST /ws/rest/orderelements" id="14f1f54f-423a-41bd-ac45-94af68f4a39e" method="POST">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="REQUEST">
+					<con:mediaType>application/xml</con:mediaType>
+					<con:params/>
+					<con:element xmlns:rest="http://rest.ws.libreplan.org">rest:order-list</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType>text/html;charset=UTF-8</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>html</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/xml</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element xmlns:rest="http://rest.ws.libreplan.org">rest:instance-constraint-violations-list
+					</con:element>
+				</con:representation>
+				<con:request name="Request 1" id="ee014223-b3a4-4c1c-9ee3-7ccb38a91449" mediaType="application/json" postQueryString="false">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080/libreplan</con:endpoint>
+					<con:request/>
+					<con:credentials>
+						<con:selectedAuthProfile>No Authorization
+						</con:selectedAuthProfile>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+			<con:method name="GET /ws/rest/orderelements" id="593fbfac-4ee2-4353-a5c7-d07a99fcb12f" method="GET">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType>text/html;charset=UTF-8</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>html</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/xml</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element xmlns:rest="http://rest.ws.libreplan.org">rest:order-list</con:element>
+				</con:representation>
+				<con:request name="Request 1" id="9b87119d-d8b6-4d83-9811-f79f2b9f7d98" mediaType="application/json">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080/libreplan</con:endpoint>
+					<con:request/>
+					<con:credentials>
+						<con:selectedAuthProfile>No Authorization
+						</con:selectedAuthProfile>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="resources" path="/ws/rest/resources" id="e5291541-6ec0-4884-99bd-121ff4e08caf">
+			<con:settings/>
+			<con:parameters/>
+			<con:resource name="{resource_order}" path="{resource_order}" id="eacfdd97-195e-4f1b-b487-9de698ada1cc">
+				<con:settings/>
+				<con:parameters>
+					<con:parameter required="true">
+						<con:name>resource_order</con:name>
+						<con:value>resource_order</con:value>
+						<con:style>TEMPLATE</con:style>
+						<con:default>resource_order</con:default>
+					</con:parameter>
+				</con:parameters>
+				<con:method name="GET /ws/rest/resources/{resource_order}" id="0292f837-694b-4f5b-b53c-dc1c73145d14" method="GET">
+					<con:settings/>
+					<con:parameters/>
+					<con:representation type="RESPONSE">
+						<con:mediaType>text/html;charset=UTF-8</con:mediaType>
+						<con:status>200</con:status>
+						<con:params/>
+						<con:element>html</con:element>
+					</con:representation>
+					<con:representation type="RESPONSE">
+						<con:mediaType>application/xml</con:mediaType>
+						<con:status>200</con:status>
+						<con:params/>
+						<con:element xmlns:rest="http://rest.ws.libreplan.org">rest:worker</con:element>
+					</con:representation>
+					<con:request name="Request 1" id="f2299127-a144-4435-8754-6c83bbdb500b" mediaType="application/json">
+						<con:settings/>
+						<con:endpoint>http://localhost:8080/libreplan</con:endpoint>
+						<con:request/>
+						<con:credentials>
+							<con:selectedAuthProfile>No Authorization
+							</con:selectedAuthProfile>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:parameters/>
+					</con:request>
+				</con:method>
+			</con:resource>
+			<con:method name="POST /ws/rest/resources" id="afb887d3-531f-46fa-867a-ba9eeb8ab690" method="POST">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/xml</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element xmlns:rest="http://rest.ws.libreplan.org">rest:instance-constraint-violations-list
+					</con:element>
+				</con:representation>
+				<con:representation type="REQUEST">
+					<con:mediaType>application/xml</con:mediaType>
+					<con:params/>
+					<con:element xmlns:rest="http://rest.ws.libreplan.org">rest:resource-list
+					</con:element>
+				</con:representation>
+				<con:representation type="FAULT">
+					<con:mediaType>application/xml</con:mediaType>
+					<con:status>500</con:status>
+					<con:params/>
+					<con:element xmlns:rest="http://rest.ws.libreplan.org">rest:internal-error
+					</con:element>
+				</con:representation>
+				<con:request name="Request 1" id="80676fee-2a54-44b8-9dba-8914bf384fa0" mediaType="application/json" postQueryString="false">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						<con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@use-get-method-on-302-redirect">false</con:setting>
+						<con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080/libreplan</con:endpoint>
+					<con:request/>
+					<con:credentials>
+						<con:selectedAuthProfile>Writer</con:selectedAuthProfile>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+			<con:method name="GET /ws/rest/calendars/{calendar_code}" id="4daf2cdc-5394-499f-af5f-414c0656ed5f" method="GET">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/xml</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element xmlns:rest="http://rest.ws.libreplan.org">rest:resource-list
+					</con:element>
+				</con:representation>
+				<con:request name="Request 1" id="647bf37d-33bf-432b-a8a1-658e606e9701" mediaType="application/json">
+					<con:settings/>
+					<con:endpoint>http://localhost:8080/libreplan</con:endpoint>
+					<con:request/>
+					<con:credentials>
+						<con:selectedAuthProfile>No Authorization
+						</con:selectedAuthProfile>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+		</con:resource>
+		<con:resource name="calendars" path="/ws/rest/calendars" id="da493148-ce46-4335-b27f-09da49f843e9">
+			<con:settings/>
+			<con:parameters/>
+			<con:resource name="{calendar_code}" path="{calendar_code}" id="63e117dc-d462-4b4c-a049-892760fdb0ef">
+				<con:settings/>
+				<con:parameters>
+					<con:parameter required="true">
+						<con:name>calendar_code</con:name>
+						<con:value>calendar_code</con:value>
+						<con:style>TEMPLATE</con:style>
+						<con:default>calendar_code</con:default>
+					</con:parameter>
+				</con:parameters>
+				<con:method name="GET /ws/rest/calendars/{calendar_code}" id="d3fbc3f2-2c44-4b7b-918a-7789da827997" method="GET">
+					<con:settings/>
+					<con:parameters/>
+					<con:representation type="RESPONSE">
+						<con:mediaType>application/xml</con:mediaType>
+						<con:status>200</con:status>
+						<con:params/>
+						<con:element xmlns:rest="http://rest.ws.libreplan.org">rest:base-calendar-list
+						</con:element>
+					</con:representation>
+					<con:request name="Request 1" id="09105ef7-894d-4931-9766-b6046d5cca9a" mediaType="application/json">
+						<con:settings/>
+						<con:endpoint>http://localhost:8080/libreplan</con:endpoint>
+						<con:request/>
+						<con:credentials>
+							<con:selectedAuthProfile>No Authorization
+							</con:selectedAuthProfile>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:parameters>
+							<con:entry key="calendar_code" value="CALENDAR0312"/>
+						</con:parameters>
+					</con:request>
+				</con:method>
+			</con:resource>
+			<con:method name="GET /ws/rest/calendars" id="bedece24-9612-4dc8-9f29-a8a263d411fa" method="GET">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/xml</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element xmlns:rest="http://rest.ws.libreplan.org">rest:base-calendar-list
+					</con:element>
+				</con:representation>
+				<con:request name="Request 1" id="16552b89-00f4-4ad1-bfbb-f9eb0e44d89d" mediaType="application/json">
+					<con:settings/>
+					<con:endpoint>http://localhost:8080/libreplan</con:endpoint>
+					<con:request/>
+					<con:credentials>
+						<con:selectedAuthProfile>No Authorization
+						</con:selectedAuthProfile>
+						<con:authType>No Authorization</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+		</con:resource>
+	</con:interface>
+	<con:testSuite id="bbe24f62-e16d-4803-9d07-699f820ced70" name="Projects - TestSuite">
+		<con:settings/>
+		<con:savedRecentRuns>1</con:savedRecentRuns>
+		<con:runType>SEQUENTIAL</con:runType>
+		<con:testCase id="b74703d7-f302-448d-9352-1043a6be1921" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Create Project - TestCase" searchProperties="true" timeout="0">
+			<con:settings/>
+			<con:savedRecentRuns>1</con:savedRecentRuns>
+			<con:testStep type="properties" name="Properties" id="8cff8913-67c5-4d7f-94a1-5d45db4235de">
+				<con:settings/>
+				<con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:properties>
+						<con:property>
+							<con:name>order_code</con:name>
+							<con:value>ORDER0056</con:value>
+						</con:property>
+					</con:properties>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="groovy" name="Groovy Script" id="7004ed37-71e4-4083-b960-fadf5d27f933">
+				<con:settings/>
+				<con:config>
+					<script>def str_prev_order_code =
+						testRunner.testCase.testSteps["Properties"].getPropertyValue("order_code");
+						def str_1bis =
+						str_prev_order_code.substring(str_prev_order_code.indexOf('0'),
+						str_prev_order_code.length()); System.out.println("New string = "
+						+ str_1bis); int newCode = Integer.parseInt(str_1bis) + 1;
+						System.out.println("New int = " + newCode); def newCodebis =
+						Integer.toString(newCode); def str_newCode = "ORDER"; for(int i=0;
+						i&lt;(4-newCodebis.length()); i++) { str_newCode += "0"; }
+						str_newCode += newCodebis; System.out.println("Final => " +
+						str_newCode);
+						testRunner.testCase.testSteps["Properties"].setPropertyValue("order_code",
+						str_newCode);
+					</script>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="restrequest" name="REST Request" id="06675f1a-7a16-438a-aa84-a9585fa9b6df">
+				<con:settings/>
+				<con:config service="LibrePlanAPI" resourcePath="/ws/rest/orderelements" methodName="POST /ws/rest/orderelements" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="REST Request" id="ee014223-b3a4-4c1c-9ee3-7ccb38a91449" mediaType="application/xml" postQueryString="false">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080/libreplan</con:endpoint>
+						<con:request><![CDATA[<order-list xmlns="http://rest.ws.libreplan.org">
 	<order calendar-name="Default" dependencies-constraints-have-priority="false" init-date="2021-05-06" name="MyThirdLogicalProject" code="${order_code}">
       	<labels/>
       	<material-assignments/>
@@ -19,20 +361,217 @@ testRunner.testCase.testSteps["Properties"].setPropertyValue("order_code", str_n
       	<criterion-requirements/>
       	<children/>
 	</order>
-</order-list>]]></con:request><con:originalUri>http://localhost/libreplan/common/layout/login.zul;jsessionid=DDA5C1549CFE9772E85FF57F6F51F391</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="e028543a-9158-4c4a-90f8-1d77f1a45b23" name="Valid HTTP Status Codes"><con:settings/><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>Writer</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="38056a65-3e35-4042-9c65-6ecef1e9690a"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>order_code</con:name><con:sourceType>order_code</con:sourceType><con:sourceStep>Properties</con:sourceStep><con:targetType>actual_order_code</con:targetType><con:targetStep>#TestSuite#</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>8cff8913-67c5-4d7f-94a1-5d45db4235de</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>7004ed37-71e4-4083-b960-fadf5d27f933</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:testCase id="88b284de-2709-4f8f-b8a6-4162d3ea9b01" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Get All Projects - TestCase" searchProperties="true" timeout="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="restrequest" name="REST Request" id="8da8bee2-ec6f-411b-aa12-c26383dcc92c"><con:settings/><con:config service="LibrePlanAPI" resourcePath="/ws/rest/orderelements" methodName="GET /ws/rest/orderelements" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="9b87119d-d8b6-4d83-9811-f79f2b9f7d98" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080/libreplan</con:endpoint><con:request/><con:originalUri>http://localhost/libreplan/common/layout/login.zul;jsessionid=5C2FC2302A8338382A810718BB34D999</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="7cf343e2-8904-45a3-8a4f-73d5945a9d22" name="Valid HTTP Status Codes"><con:settings/><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>Reader</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="f37bdfd3-8437-4b0d-9855-37ab560557b0" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Get One Project - TestCase" searchProperties="true" timeout="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="restrequest" name="REST Request" id="f59cf8ed-3215-4066-ae32-bee2ca179e01"><con:settings/><con:config service="LibrePlanAPI" resourcePath="/ws/rest/orderelements/{code_order}" methodName="GET /ws/rest/orderelements/{code_order}" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="c7e0fbb9-e446-4580-b91f-059e9ab146d4" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080/libreplan</con:endpoint><con:request/><con:originalUri>http://localhost/libreplan/ws/rest/orderelements/ORDER0053</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="4731c9bb-dc55-42fd-bf85-0cd2ca638975" name="Valid HTTP Status Codes"><con:settings/><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>Reader</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters><con:entry key="code_order" value="${#TestSuite#actual_order_code}"/></con:parameters></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="638e0983-3785-4a55-b8c5-78fd3b5f54a0" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Delete Project - TestCase" searchProperties="true" timeout="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="restrequest" name="REST Request" id="b27faa89-18e6-4ad7-b754-f8af213d2580"><con:settings/><con:config service="LibrePlanAPI" resourcePath="/ws/rest/orderelements/{code_order}" methodName="DELETE /ws/rest/orderelements/{code_order}" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="b96f4c90-e875-44fe-b799-d0113bc0d87d" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080/libreplan</con:endpoint><con:request/><con:originalUri>http://localhost/libreplan/ws/rest/orderelements/ORDER0053</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="b572fd92-b18c-4fce-9ed7-ec7b5771e83f" name="Valid HTTP Status Codes"><con:settings/><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>Writer</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters><con:entry key="code_order" value="${#TestSuite#actual_order_code}"/></con:parameters></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:properties><con:property><con:name>actual_order_code</con:name><con:value>ORDER0056</con:value></con:property></con:properties><con:reportParameters/></con:testSuite><con:testSuite id="b67749a7-f1ff-446c-bf24-bd1d3f8f781b" name="Resources - TestSuite"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:runType>SEQUENTIAL</con:runType><con:testCase id="6be4543f-307d-4662-9a31-b2650cb73ca7" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Create Resource - TestCase" searchProperties="true" timeout="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="properties" name="Properties" id="5d2bd826-40fa-43bd-9eaf-c7389e299577"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>resource_code</con:name><con:value>WORKER0021</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script" id="6063a450-a2ea-4e52-b807-fec61f1ee101"><con:settings/><con:config><script>def str_prev_order_code = testRunner.testCase.testSteps["Properties"].getPropertyValue("resource_code");
-def str_1bis = str_prev_order_code.substring(str_prev_order_code.indexOf('0'), str_prev_order_code.length());
-System.out.println("New string = " + str_1bis);
-int newCode = Integer.parseInt(str_1bis) + 1;
-System.out.println("New int = " + newCode);
-def newCodebis = Integer.toString(newCode);
-def str_newCode = "WORKER";
-for(int i=0; i&lt;(4-newCodebis.length()); i++) {
-	 str_newCode += "0";
-}
-str_newCode += newCodebis;
-System.out.println("Final => " + str_newCode);
-testRunner.testCase.testSteps["Properties"].setPropertyValue("resource_code", str_newCode);</script></con:config></con:testStep><con:testStep type="restrequest" name="REST Request" id="54e659ed-81a8-424f-836b-f27eeaa6f18a"><con:settings/><con:config service="LibrePlanAPI" resourcePath="/ws/rest/resources" methodName="POST /ws/rest/resources" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="80676fee-2a54-44b8-9dba-8914bf384fa0" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080/libreplan</con:endpoint><con:request><![CDATA[<resource-list xmlns="http://rest.ws.libreplan.org">
-   <worker nif="BF" surname="Bea" first-name="Folle" code="${resource_code}">
+</order-list>]]></con:request>
+						<con:originalUri>http://localhost/libreplan/common/layout/login.zul;jsessionid=DDA5C1549CFE9772E85FF57F6F51F391
+						</con:originalUri>
+						<con:assertion type="Valid HTTP Status Codes" id="e028543a-9158-4c4a-90f8-1d77f1a45b23" name="Valid HTTP Status Codes">
+							<con:settings/>
+							<con:configuration>
+								<codes>200</codes>
+							</con:configuration>
+						</con:assertion>
+						<con:credentials>
+							<con:selectedAuthProfile>Writer</con:selectedAuthProfile>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:parameters/>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="transfer" name="Property Transfer" id="38056a65-3e35-4042-9c65-6ecef1e9690a">
+				<con:settings/>
+				<con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+						<con:name>order_code</con:name>
+						<con:sourceType>order_code</con:sourceType>
+						<con:sourceStep>Properties</con:sourceStep>
+						<con:targetType>actual_order_code</con:targetType>
+						<con:targetStep>#TestSuite#</con:targetStep>
+						<con:upgraded>true</con:upgraded>
+					</con:transfers>
+				</con:config>
+			</con:testStep>
+			<con:properties/>
+			<con:reportParameters/>
+			<con:breakPoints>
+				<con:testStepId>8cff8913-67c5-4d7f-94a1-5d45db4235de
+				</con:testStepId>
+				<con:status>NONE</con:status>
+				<con:properties/>
+			</con:breakPoints>
+			<con:breakPoints>
+				<con:testStepId>7004ed37-71e4-4083-b960-fadf5d27f933
+				</con:testStepId>
+				<con:status>NONE</con:status>
+				<con:properties/>
+			</con:breakPoints>
+		</con:testCase>
+		<con:testCase id="88b284de-2709-4f8f-b8a6-4162d3ea9b01" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Get All Projects - TestCase" searchProperties="true" timeout="0">
+			<con:settings/>
+			<con:savedRecentRuns>1</con:savedRecentRuns>
+			<con:testStep type="restrequest" name="REST Request" id="8da8bee2-ec6f-411b-aa12-c26383dcc92c">
+				<con:settings/>
+				<con:config service="LibrePlanAPI" resourcePath="/ws/rest/orderelements" methodName="GET /ws/rest/orderelements" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="REST Request" id="9b87119d-d8b6-4d83-9811-f79f2b9f7d98" mediaType="application/json">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080/libreplan</con:endpoint>
+						<con:request/>
+						<con:originalUri>http://localhost/libreplan/common/layout/login.zul;jsessionid=5C2FC2302A8338382A810718BB34D999
+						</con:originalUri>
+						<con:assertion type="Valid HTTP Status Codes" id="7cf343e2-8904-45a3-8a4f-73d5945a9d22" name="Valid HTTP Status Codes">
+							<con:settings/>
+							<con:configuration>
+								<codes>200</codes>
+							</con:configuration>
+						</con:assertion>
+						<con:credentials>
+							<con:selectedAuthProfile>Reader</con:selectedAuthProfile>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:parameters/>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:properties/>
+			<con:reportParameters/>
+		</con:testCase>
+		<con:testCase id="f37bdfd3-8437-4b0d-9855-37ab560557b0" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Get One Project - TestCase" searchProperties="true" timeout="0">
+			<con:settings/>
+			<con:savedRecentRuns>1</con:savedRecentRuns>
+			<con:testStep type="restrequest" name="REST Request" id="f59cf8ed-3215-4066-ae32-bee2ca179e01">
+				<con:settings/>
+				<con:config service="LibrePlanAPI" resourcePath="/ws/rest/orderelements/{code_order}" methodName="GET /ws/rest/orderelements/{code_order}" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="REST Request" id="c7e0fbb9-e446-4580-b91f-059e9ab146d4" mediaType="application/json">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080/libreplan</con:endpoint>
+						<con:request/>
+						<con:originalUri>http://localhost/libreplan/ws/rest/orderelements/ORDER0053
+						</con:originalUri>
+						<con:assertion type="Valid HTTP Status Codes" id="4731c9bb-dc55-42fd-bf85-0cd2ca638975" name="Valid HTTP Status Codes">
+							<con:settings/>
+							<con:configuration>
+								<codes>200</codes>
+							</con:configuration>
+						</con:assertion>
+						<con:credentials>
+							<con:selectedAuthProfile>Reader</con:selectedAuthProfile>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:parameters>
+							<con:entry key="code_order" value="${#TestSuite#actual_order_code}"/>
+						</con:parameters>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:properties/>
+			<con:reportParameters/>
+		</con:testCase>
+		<con:testCase id="638e0983-3785-4a55-b8c5-78fd3b5f54a0" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Delete Project - TestCase" searchProperties="true" timeout="0">
+			<con:settings/>
+			<con:savedRecentRuns>1</con:savedRecentRuns>
+			<con:testStep type="restrequest" name="REST Request" id="b27faa89-18e6-4ad7-b754-f8af213d2580">
+				<con:settings/>
+				<con:config service="LibrePlanAPI" resourcePath="/ws/rest/orderelements/{code_order}" methodName="DELETE /ws/rest/orderelements/{code_order}" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="REST Request" id="b96f4c90-e875-44fe-b799-d0113bc0d87d" mediaType="application/json" postQueryString="false">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080/libreplan</con:endpoint>
+						<con:request/>
+						<con:originalUri>http://localhost/libreplan/ws/rest/orderelements/ORDER0053
+						</con:originalUri>
+						<con:assertion type="Valid HTTP Status Codes" id="b572fd92-b18c-4fce-9ed7-ec7b5771e83f" name="Valid HTTP Status Codes">
+							<con:settings/>
+							<con:configuration>
+								<codes>200</codes>
+							</con:configuration>
+						</con:assertion>
+						<con:credentials>
+							<con:selectedAuthProfile>Writer</con:selectedAuthProfile>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:parameters>
+							<con:entry key="code_order" value="${#TestSuite#actual_order_code}"/>
+						</con:parameters>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:properties/>
+			<con:reportParameters/>
+		</con:testCase>
+		<con:properties>
+			<con:property>
+				<con:name>actual_order_code</con:name>
+				<con:value>ORDER0056</con:value>
+			</con:property>
+		</con:properties>
+		<con:reportParameters/>
+	</con:testSuite>
+	<con:testSuite id="b67749a7-f1ff-446c-bf24-bd1d3f8f781b" name="Resources - TestSuite">
+		<con:settings/>
+		<con:savedRecentRuns>1</con:savedRecentRuns>
+		<con:runType>SEQUENTIAL</con:runType>
+		<con:testCase id="6be4543f-307d-4662-9a31-b2650cb73ca7" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Create Resource - TestCase" searchProperties="true" timeout="0">
+			<con:settings/>
+			<con:savedRecentRuns>1</con:savedRecentRuns>
+			<con:testStep type="properties" name="Properties" id="5d2bd826-40fa-43bd-9eaf-c7389e299577">
+				<con:settings/>
+				<con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:properties>
+						<con:property>
+							<con:name>resource_code</con:name>
+							<con:value>WORKER0033</con:value>
+						</con:property>
+						<con:property>
+							<con:name>index_resource</con:name>
+							<con:value>33</con:value>
+						</con:property>
+					</con:properties>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="groovy" name="Groovy Script" id="6063a450-a2ea-4e52-b807-fec61f1ee101">
+				<con:settings/>
+				<con:config>
+					<script>def str_prev_order_code =
+						testRunner.testCase.testSteps["Properties"].getPropertyValue("resource_code");
+						def str_1bis =
+						str_prev_order_code.substring(str_prev_order_code.indexOf('0'),
+						str_prev_order_code.length());
+						System.out.println("New string = " + str_1bis);
+						int newCode = Integer.parseInt(str_1bis) + 1;
+						System.out.println("New int = " + newCode);
+						def newCodebis = Integer.toString(newCode);
+						testRunner.testCase.testSteps["Properties"].setPropertyValue("index_resource",
+						newCodebis);
+						def str_newCode = "WORKER";
+						for(int i=0; i&lt;(4-newCodebis.length()); i++) {
+						str_newCode += "0";
+						}
+						str_newCode += newCodebis;
+						System.out.println("Final => " + str_newCode);
+						testRunner.testCase.testSteps["Properties"].setPropertyValue("resource_code",
+						str_newCode);
+					</script>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="restrequest" name="REST Request" id="54e659ed-81a8-424f-836b-f27eeaa6f18a">
+				<con:settings/>
+				<con:config service="LibrePlanAPI" resourcePath="/ws/rest/resources" methodName="POST /ws/rest/resources" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="REST Request" id="80676fee-2a54-44b8-9dba-8914bf384fa0" mediaType="application/xml" postQueryString="false">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080/libreplan</con:endpoint>
+						<con:request><![CDATA[<resource-list xmlns="http://rest.ws.libreplan.org">
+   <worker nif="MS${index_resource}" surname="Seguin${index_resource}" first-name="Marcel${index_resource}" code="${resource_code}">
       <calendar capacity="1" parent="CALENDAR0001" code="RESOURCE_CALENDAR0007">
          <calendar-exception-list/>
          <calendar-data-list>
@@ -47,27 +586,243 @@ testRunner.testCase.testSteps["Properties"].setPropertyValue("resource_code", st
       <criterion-satisfaction-list/>
       <resources-cost-category-assignment-list/>
    </worker>
-</resource-list>]]></con:request><con:originalUri>http://localhost/libreplan/ws/rest/resources</con:originalUri><con:credentials><con:selectedAuthProfile>Writer</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="69e88aaa-e8fa-48dd-b93d-cf1fc69107ed"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>resource_code</con:name><con:sourceType>resource_code</con:sourceType><con:sourceStep>Properties</con:sourceStep><con:sourcePath/><con:targetType>actual_resource_code</con:targetType><con:targetStep>#TestSuite#</con:targetStep><con:targetPath/><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>6063a450-a2ea-4e52-b807-fec61f1ee101</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>5d2bd826-40fa-43bd-9eaf-c7389e299577</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:testCase id="7a6864ac-120c-4e7b-a81d-36747af082cf" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Get One Resource - TestCase" searchProperties="true" timeout="0"><con:settings/><con:testStep type="restrequest" name="REST Request" id="41a4767e-e230-4383-bfe0-89ac566a407d"><con:settings/><con:config service="LibrePlanAPI" resourcePath="/ws/rest/resources/{resource_order}" methodName="GET /ws/rest/resources/{resource_order}" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="f2299127-a144-4435-8754-6c83bbdb500b" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080/libreplan</con:endpoint><con:request/><con:originalUri>http://localhost/libreplan/common/layout/login.zul;jsessionid=D8407906D69FE58B4ECAC2BBAF8D0A2A</con:originalUri><con:credentials><con:selectedAuthProfile>Reader</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters><con:entry key="resource_order" value="${#TestSuite#actual_resource_code}"/></con:parameters></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="a474a78a-030f-47bd-9f6b-31ee98dfdacb" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Get All Resources - TestCase" searchProperties="true" timeout="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="restrequest" name="REST Request" id="17e2d57f-bcae-422c-8ba9-8725b4a586e3"><con:settings/><con:config service="LibrePlanAPI" resourcePath="/ws/rest/resources" methodName="GET /ws/rest/calendars/{calendar_code}" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="647bf37d-33bf-432b-a8a1-658e606e9701" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080/libreplan</con:endpoint><con:request/><con:originalUri>http://localhost/libreplan/ws/rest/resources</con:originalUri><con:credentials><con:selectedAuthProfile>Reader</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:properties><con:property><con:name>actual_resource_code</con:name><con:value>WORKER0021</con:value></con:property></con:properties><con:reportParameters/></con:testSuite><con:testSuite id="a85c3f92-8e94-4489-af59-8710ab4f9e83" name="Calendars - TestSuite"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:runType>SEQUENTIAL</con:runType><con:testCase id="50712f1e-67fe-4441-9d37-ca1c89b64609" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Get All Calendars - TestCase" searchProperties="true" timeout="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="restrequest" name="REST Request" id="2091b382-081b-4869-820d-9ac70ec6c568"><con:settings/><con:config service="LibrePlanAPI" resourcePath="/ws/rest/calendars" methodName="GET /ws/rest/calendars" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="16552b89-00f4-4ad1-bfbb-f9eb0e44d89d" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080/libreplan</con:endpoint><con:request/><con:originalUri>http://localhost/libreplan/ws/rest/calendars</con:originalUri><con:credentials><con:selectedAuthProfile>Reader</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="9e7bb09c-c4e4-4ee9-b1d7-276bfcb6b151" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Get One Calendar - TestCase" searchProperties="true" timeout="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="restrequest" name="REST Request" id="c9e13b99-9bf4-4504-8f00-18cc0844c18e"><con:settings/><con:config service="LibrePlanAPI" resourcePath="/ws/rest/calendars/{calendar_code}" methodName="GET /ws/rest/calendars/{calendar_code}" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="09105ef7-894d-4931-9766-b6046d5cca9a" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080/libreplan</con:endpoint><con:request/><con:originalUri>http://localhost/libreplan/ws/rest/calendars/</con:originalUri><con:credentials><con:selectedAuthProfile>Reader</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters><con:entry key="calendar_code" value="${#TestSuite#calendar_code}"/></con:parameters></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:properties><con:property><con:name>calendar_code</con:name><con:value>CALENDAR0312</con:value></con:property></con:properties><con:reportParameters/></con:testSuite><con:savedRecentRuns>1</con:savedRecentRuns><con:requirements/><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:jmsConnectionContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:reporting><con:reportTemplates/><con:xmlTemplates/><con:xmlTemplates/><con:parameters/><con:parameters/></con:reporting><con:reporting/><con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest"><con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
-// This code is often used for adding custom authentication to ReadyAPI functional tests
+</resource-list>]]></con:request>
+						<con:originalUri>http://localhost/libreplan/ws/rest/resources
+						</con:originalUri>
+						<con:credentials>
+							<con:selectedAuthProfile>Writer</con:selectedAuthProfile>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:parameters/>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="transfer" name="Property Transfer" id="69e88aaa-e8fa-48dd-b93d-cf1fc69107ed">
+				<con:settings/>
+				<con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+						<con:name>resource_code</con:name>
+						<con:sourceType>resource_code</con:sourceType>
+						<con:sourceStep>Properties</con:sourceStep>
+						<con:sourcePath/>
+						<con:targetType>actual_resource_code</con:targetType>
+						<con:targetStep>#TestSuite#</con:targetStep>
+						<con:targetPath/>
+						<con:upgraded>true</con:upgraded>
+					</con:transfers>
+				</con:config>
+			</con:testStep>
+			<con:properties/>
+			<con:reportParameters/>
+			<con:breakPoints>
+				<con:testStepId>6063a450-a2ea-4e52-b807-fec61f1ee101
+				</con:testStepId>
+				<con:status>NONE</con:status>
+				<con:properties/>
+			</con:breakPoints>
+			<con:breakPoints>
+				<con:testStepId>5d2bd826-40fa-43bd-9eaf-c7389e299577
+				</con:testStepId>
+				<con:status>NONE</con:status>
+				<con:properties/>
+			</con:breakPoints>
+		</con:testCase>
+		<con:testCase id="7a6864ac-120c-4e7b-a81d-36747af082cf" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Get One Resource - TestCase" searchProperties="true" timeout="0">
+			<con:settings/>
+			<con:testStep type="restrequest" name="REST Request" id="41a4767e-e230-4383-bfe0-89ac566a407d">
+				<con:settings/>
+				<con:config service="LibrePlanAPI" resourcePath="/ws/rest/resources/{resource_order}" methodName="GET /ws/rest/resources/{resource_order}" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="REST Request" id="f2299127-a144-4435-8754-6c83bbdb500b" mediaType="application/json">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080/libreplan</con:endpoint>
+						<con:request/>
+						<con:originalUri>http://localhost/libreplan/common/layout/login.zul;jsessionid=D8407906D69FE58B4ECAC2BBAF8D0A2A
+						</con:originalUri>
+						<con:credentials>
+							<con:selectedAuthProfile>Reader</con:selectedAuthProfile>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:parameters>
+							<con:entry key="resource_order" value="${#TestSuite#actual_resource_code}"/>
+						</con:parameters>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:properties/>
+			<con:reportParameters/>
+		</con:testCase>
+		<con:testCase id="a474a78a-030f-47bd-9f6b-31ee98dfdacb" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Get All Resources - TestCase" searchProperties="true" timeout="0">
+			<con:settings/>
+			<con:savedRecentRuns>1</con:savedRecentRuns>
+			<con:testStep type="restrequest" name="REST Request" id="17e2d57f-bcae-422c-8ba9-8725b4a586e3">
+				<con:settings/>
+				<con:config service="LibrePlanAPI" resourcePath="/ws/rest/resources" methodName="GET /ws/rest/calendars/{calendar_code}" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="REST Request" id="647bf37d-33bf-432b-a8a1-658e606e9701" mediaType="application/json">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080/libreplan</con:endpoint>
+						<con:request/>
+						<con:originalUri>http://localhost/libreplan/ws/rest/resources
+						</con:originalUri>
+						<con:credentials>
+							<con:selectedAuthProfile>Reader</con:selectedAuthProfile>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:parameters/>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:properties/>
+			<con:reportParameters/>
+		</con:testCase>
+		<con:properties>
+			<con:property>
+				<con:name>actual_resource_code</con:name>
+				<con:value>WORKER0033</con:value>
+			</con:property>
+		</con:properties>
+		<con:reportParameters/>
+	</con:testSuite>
+	<con:testSuite id="a85c3f92-8e94-4489-af59-8710ab4f9e83" name="Calendars - TestSuite">
+		<con:settings/>
+		<con:savedRecentRuns>1</con:savedRecentRuns>
+		<con:runType>SEQUENTIAL</con:runType>
+		<con:testCase id="50712f1e-67fe-4441-9d37-ca1c89b64609" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Get All Calendars - TestCase" searchProperties="true" timeout="0">
+			<con:settings/>
+			<con:savedRecentRuns>1</con:savedRecentRuns>
+			<con:testStep type="restrequest" name="REST Request" id="2091b382-081b-4869-820d-9ac70ec6c568">
+				<con:settings/>
+				<con:config service="LibrePlanAPI" resourcePath="/ws/rest/calendars" methodName="GET /ws/rest/calendars" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="REST Request" id="16552b89-00f4-4ad1-bfbb-f9eb0e44d89d" mediaType="application/json">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080/libreplan</con:endpoint>
+						<con:request/>
+						<con:originalUri>http://localhost/libreplan/ws/rest/calendars
+						</con:originalUri>
+						<con:credentials>
+							<con:selectedAuthProfile>Reader</con:selectedAuthProfile>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:parameters/>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:properties/>
+			<con:reportParameters/>
+		</con:testCase>
+		<con:testCase id="9e7bb09c-c4e4-4ee9-b1d7-276bfcb6b151" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Get One Calendar - TestCase" searchProperties="true" timeout="0">
+			<con:settings/>
+			<con:savedRecentRuns>1</con:savedRecentRuns>
+			<con:testStep type="restrequest" name="REST Request" id="c9e13b99-9bf4-4504-8f00-18cc0844c18e">
+				<con:settings/>
+				<con:config service="LibrePlanAPI" resourcePath="/ws/rest/calendars/{calendar_code}" methodName="GET /ws/rest/calendars/{calendar_code}" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="REST Request" id="09105ef7-894d-4931-9766-b6046d5cca9a" mediaType="application/json">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://localhost:8080/libreplan</con:endpoint>
+						<con:request/>
+						<con:originalUri>http://localhost/libreplan/ws/rest/calendars/
+						</con:originalUri>
+						<con:credentials>
+							<con:selectedAuthProfile>Reader</con:selectedAuthProfile>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:parameters>
+							<con:entry key="calendar_code" value="${#TestSuite#calendar_code}"/>
+						</con:parameters>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:properties/>
+			<con:reportParameters/>
+		</con:testCase>
+		<con:properties>
+			<con:property>
+				<con:name>calendar_code</con:name>
+				<con:value>CALENDAR0312</con:value>
+			</con:property>
+		</con:properties>
+		<con:reportParameters/>
+	</con:testSuite>
+	<con:savedRecentRuns>1</con:savedRecentRuns>
+	<con:requirements/>
+	<con:properties/>
+	<con:wssContainer/>
+	<con:databaseConnectionContainer/>
+	<con:jmsConnectionContainer/>
+	<con:oAuth2ProfileContainer/>
+	<con:oAuth1ProfileContainer/>
+	<con:reporting>
+		<con:reportTemplates/>
+		<con:xmlTemplates/>
+		<con:xmlTemplates/>
+		<con:parameters/>
+		<con:parameters/>
+	</con:reporting>
+	<con:reporting/>
+	<con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+		<con:script>// Sample event script to add custom HTTP header to all
+			outgoing REST, SOAP and HTTP(S) calls
+			// This code is often used for adding custom authentication to ReadyAPI
+			functional tests
 
-// If hardcoding the token, uncomment and change line 5
-// token = '4567'
+			// If hardcoding the token, uncomment and change line 5
+			// token = '4567'
 
-// If your token is parameterized in Project level custom property, uncomment line 8
-// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+			// If your token is parameterized in Project level custom property,
+			uncomment line 8
+			// token =
+			request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
 
-// To modify all outgoing calls, remove comments from lines 11 to 16
-// headers = request.requestHeaders
-// if (headers.containsKey('auth_token2') == false) {
-//   headers.put('auth_token2', token)
-//   request.requestHeaders = headers
-// }</con:script></con:eventHandlers><con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep"><con:script>// Save all test step results into files
-// Change the directory path in line 5 to a location where you want to store details
-// then uncomment lines 5 to 10
+			// To modify all outgoing calls, remove comments from lines 11 to 16
+			// headers = request.requestHeaders
+			// if (headers.containsKey('auth_token2') == false) {
+			// headers.put('auth_token2', token)
+			// request.requestHeaders = headers
+			// }
+		</con:script>
+	</con:eventHandlers>
+	<con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+		<con:script>// Save all test step results into files
+			// Change the directory path in line 5 to a location where you want to
+			store details
+			// then uncomment lines 5 to 10
 
-// filePath = 'C:\\tempOutputDirectory\\'
-// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
-// pw = new java.io.PrintWriter(fos)
-// testStepResult.writeTo(pw)
-// pw.close()
-// fos.close()</con:script></con:eventHandlers><con:authRepository><con:basicAuthEntry><con:name>Reader</con:name><con:type>Basic</con:type><con:username>wsreader</con:username><con:password>wsreader</con:password><con:preemptive>true</con:preemptive></con:basicAuthEntry><con:basicAuthEntry><con:name>Writer</con:name><con:type>Basic</con:type><con:username>wswriter</con:username><con:password>wswriter</con:password><con:preemptive>true</con:preemptive></con:basicAuthEntry></con:authRepository><con:tags/></con:soapui-project>
+			// filePath = 'C:\\tempOutputDirectory\\'
+			// fos = new java.io.FileOutputStream(filePath +
+			testStepResult.testStep.label + '.txt', true)
+			// pw = new java.io.PrintWriter(fos)
+			// testStepResult.writeTo(pw)
+			// pw.close()
+			// fos.close()
+		</con:script>
+	</con:eventHandlers>
+	<con:authRepository>
+		<con:basicAuthEntry>
+			<con:name>Reader</con:name>
+			<con:type>Basic</con:type>
+			<con:username>wsreader</con:username>
+			<con:password>wsreader</con:password>
+			<con:preemptive>true</con:preemptive>
+		</con:basicAuthEntry>
+		<con:basicAuthEntry>
+			<con:name>Writer</con:name>
+			<con:type>Basic</con:type>
+			<con:username>wswriter</con:username>
+			<con:password>wswriter</con:password>
+			<con:preemptive>true</con:preemptive>
+		</con:basicAuthEntry>
+	</con:authRepository>
+	<con:tags/>
+</con:soapui-project>
